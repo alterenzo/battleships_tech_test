@@ -16,19 +16,13 @@ class Board
     end
   end
 
-  def flip(row_index, cell_index)
-    @all[numerify(row_index)][cell_index] ^= true
+  def flip(row, col)
+    @all[row][col] ^= true
   end
 
-  def [](row_index)
-    @all[numerify(row_index)].dup
+  def [](row)
+    @all[row].dup
   end
 
-
-  private
-
-  def numerify(letter)
-    letter.downcase.ord - 97
-  end
 
 end

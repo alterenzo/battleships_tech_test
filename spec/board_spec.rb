@@ -11,8 +11,14 @@ describe Board do
 
   describe "#flip" do
     it "flips the status at an index" do
-      my_board.flip('a',1)
-      expect(my_board['a'][1]).to be true
+      my_board.flip(1,1)
+      expect(my_board[1][1]).to be true
+    end
+  end
+
+  describe "#[](n)" do
+    it "returns the nth row of the board" do
+      expect(my_board[1]).to be_a Array
     end
   end
 end
